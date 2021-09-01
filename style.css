@@ -1,68 +1,82 @@
-*{
+/* body{
+    width: 100%;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding:0;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
 }
 .header{  
+    margin: 20px;
+    padding: 5px;
     display: flex;
-    box-sizing: border-box;
-    width: 98%;
-    height: 70px;
-    margin: 14px;
     background-image: linear-gradient(90deg,#19398a 12%,#1b4c92 50%,#19398a 89%) ;
 }
 
-#para1{
-    margin-left: 50px;
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    font-size: small;
-    display: flexbox;
-}
+.header img
+{
 
-img{
-    position: fixed;
-    float: left;
-    height: 40px;
-    width: 50px;
-    top: 28px;
-    padding-left: 25px;
+    width:1cm ;
+    height: 2cm;
 }
+.header h2{
+    padding: 5px 0px 5px 10px;
+    margin:0 ;
+    width: min-content;
+    font-size: 1.3em;
+    color:white;
+}
+ */
 
-.column {
-    float: left;
-    width: 20%;
-    padding: 0 10px;
-  }
-.row {
-    margin: 25px -5px;
+ body{
+     width: 100%;
+     margin: 0;
+     padding: 0;
+ }
+
+ html{
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ .header{
+    margin: 20px;
+    padding: 5px;
     display: flex;
+    background-image: linear-gradient(90deg,#19398a 12%,#1b4c92 50%,#19398a 89%) ;
 
-    flex-wrap: wrap;
+ }
 
-    justify-content: center;
-}
+ .header img{
+     width: 1cm;
+     height: 1.7cm;
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+ }
 
-@media screen and (max-width: 640px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
+ .header h2{
+     padding: 5px 0px 5px 10px;
+     margin: 0;
+     width: min-content;
+     font-size: 1.1em;
+     color: white;
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    height: 200px;
-    width: 250px;
+ }
+
+ .container{
+     display: flex;
+
+     flex-wrap: wrap;
+     width: 100%;
+
+     justify-content: center;
+ }
+
+ .cards{
+    box-shadow: 0px 2px 1.5px yellow;
+    border-radius: 10px;
+    background-color: yellow;
     text-align: center;
-    background-color: #f1f1f1;
-  }
+    width: 20%;
+    height: 250px;
+    margin: 10px;
+    padding: 5px;
+ }

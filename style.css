@@ -81,14 +81,34 @@ html{
 }
 .cards-csk{
     background: linear-gradient(136deg, rgb(253,185,19), rgb(248,92,0));
+    color: white;
 }
 
 .cards-di{
     background:  linear-gradient(136deg,#004c93,#0358a7);
+    color: white;
 }
 .cards-kkr{
     background:  linear-gradient(136deg,#70458f,#3d2057);
+    color: white;
 }
 .cards-mi{
     background:  linear-gradient(136deg,#005da0,#003a63);
+    color: white;
+}
+.cards-pix{
+    background:  linear-gradient(136deg,#aa4545,#740f0b);
+    color: white;
+}
+.cards-rr{
+    background: linear-gradient(136deg,#2d4d9d,#172e5e);
+    color: white;
+}
+.cards-rcb{
+    background:  linear-gradient(136deg,#000,#464646);
+    color: white;
+}
+.cards-sh{
+    background:  linear-gradient(136deg,#fb643e,#b81c25);
+    color: white;
 }

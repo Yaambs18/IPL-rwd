@@ -75,40 +75,69 @@ html{
    border-radius: 10px;
    text-align: center;
    width: 20%;
-   height: 250px;
    margin: 10px;
    padding: 5px;
 }
+
+.card__title {
+    margin-top: 1rem;
+    font-size: 2.2rem;
+}
+
+.card__subtitle{
+    height: 2rem;
+    margin: 1rem 0 2rem;
+}
+
+.card__link{
+    padding: 0 0 .4rem;
+    margin-bottom: .2rem;
+    transition: all .3s ease;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    box-sizing: border-box;
+}
 .cards-csk{
     background: linear-gradient(136deg, rgb(253,185,19), rgb(248,92,0));
+    margin: 1rem;
     color: white;
 }
 
 .cards-di{
     background:  linear-gradient(136deg,#004c93,#0358a7);
+    margin: 1rem;
     color: white;
 }
 .cards-kkr{
     background:  linear-gradient(136deg,#70458f,#3d2057);
+    margin: 1rem;
     color: white;
 }
 .cards-mi{
     background:  linear-gradient(136deg,#005da0,#003a63);
+    margin: 1rem;
     color: white;
 }
 .cards-pix{
     background:  linear-gradient(136deg,#aa4545,#740f0b);
+    margin: 1rem;
     color: white;
 }
 .cards-rr{
     background: linear-gradient(136deg,#2d4d9d,#172e5e);
+    margin: 1rem;
     color: white;
 }
 .cards-rcb{
     background:  linear-gradient(136deg,#000,#464646);
+    margin: 1rem;
     color: white;
 }
 .cards-sh{
     background:  linear-gradient(136deg,#fb643e,#b81c25);
+    margin: 1rem;
     color: white;
 }

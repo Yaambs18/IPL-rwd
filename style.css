@@ -1,33 +1,3 @@
-/* body{
-    width: 100%;
-    margin: 0;
-    padding:0;
-}
-html{
-    font-family: Arial, Helvetica, sans-serif;
-}
-.header{  
-    margin: 20px;
-    padding: 5px;
-    display: flex;
-    background-image: linear-gradient(90deg,#19398a 12%,#1b4c92 50%,#19398a 89%) ;
-}
-
-.header img
-{
-
-    width:1cm ;
-    height: 2cm;
-}
-.header h2{
-    padding: 5px 0px 5px 10px;
-    margin:0 ;
-    width: min-content;
-    font-size: 1.3em;
-    color:white;
-}
- */
-
  body{
     width: 100%;
     margin: 0;
@@ -40,14 +10,15 @@ html{
 
 .header{
    padding: 5px;
+   margin: 10px;
    display: flex;
    background-image: linear-gradient(90deg,#19398a 12%,#1b4c92 50%,#19398a 89%) ;
 
 }
 
 .header img{
-    width: 1cm;
-    height: 1.7cm;
+    width: 0.7cm;
+    height: 1cm;
 
 }
 
@@ -55,7 +26,7 @@ html{
     padding: 5px 0px 5px 10px;
     margin: 0;
     width: min-content;
-    font-size: 1.1em;
+    font-size: 0.6em;
     color: white;
 
 }
@@ -84,18 +55,28 @@ html{
 
 .card__subtitle{
     height: 2rem;
-    margin: 1rem 0 2rem;
+    margin: 1rem;
 }
 
 .card__link{
-    margin-top: 30px;
-    padding: 25px;;
+    margin-top: 20px;
+    padding: 20px;;
     background-color: transparent;
     font-size: 1em;
     border: none;
     cursor: pointer;
     color: white;
 }
+
+.fa{
+    background: hsla(0,0%,7%,.35);
+    border-radius: 50px;
+    color: #e2d612;
+    padding: 10px;
+    align-items: center;
+    margin: 0 15px 0 15px;
+}
+
 .cards-csk{
     background: linear-gradient(136deg, rgb(253,185,19), rgb(248,92,0));
     color: white;
@@ -132,4 +113,68 @@ html{
 
 .cards img{
     margin-top: -10px;
+    height: 3.5cm;
+    width: 3.5cm;
+}
+.card-arrow
+{
+    display: none;
+}
+
+@media screen and (max-width:700px) and (min-width:0px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .cards{
+        width: auto;
+        height: 90px;
+    }
+
+    .cards img{
+        float: left;
+        margin: 5px;
+        height: 70px;
+        width: 70px;
+    }
+    .card__title{
+        text-align: left;
+        font-size: medium;
+        margin: 0;
+        padding: 10px 0 0 90px;
+        width: max-content;
+    }
+    .card__subtitle{
+        display: none;
+    }
+    .fa {
+        padding-left: 8px;
+        border-radius: 30px;
+        display: block;
+        float: left;
+        margin: 0 15px 0 10px;
+    }
+    .year{
+        font-size: 0.3cm !important; 
+    }
+    .card__link{
+        display: none;
+
+    }
+    /* .card-arrow{
+        display: initial;
+        background: hsla(0,0%,7%,.35);
+        border-radius: 50px;
+        padding: 50px 0 50px 0;
+        
+    } */
+    
+}
+
+@media screen and (max-width:1000px) and (min-width:700px){
+    .cards{
+        width: 30%;
+    }
+
 }

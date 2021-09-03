@@ -89,3 +89,17 @@ html{
     padding: 0;
 
 }
+
+@media screen and (max-width:500px) and (min-width:0px) {
+    .playercard{
+        width: 80%;
+    }
+    
+}
+
+@media screen and (max-width:900px) and (min-width:500px) {
+    .playercard{
+        width: 40%;
+    }
+    
+}

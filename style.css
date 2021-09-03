@@ -10,7 +10,6 @@ html{
 
 .header{
    padding: 5px;
-   margin: 10px;
    display: flex;
    background-image: linear-gradient(90deg,#19398a 12%,#1b4c92 50%,#19398a 89%) ;
 
@@ -118,7 +117,7 @@ html{
 }
 .card-arrow
 {
-    display: none;
+    display: none !important;
 }
 
 @media screen and (max-width:700px) and (min-width:0px){
@@ -127,9 +126,16 @@ html{
         flex-direction: column;
     }
 
+    .team-card__wins{
+        flex: 1;
+
+    }
+
     .cards{
         width: auto;
         height: 90px;
+        margin: 10px;
+        display: flex;
     }
 
     .cards img{
@@ -142,8 +148,9 @@ html{
         text-align: left;
         font-size: medium;
         margin: 0;
-        padding: 10px 0 0 90px;
+        padding: 15px 0 10px 0;
         width: max-content;
+        height: max-content;
     }
     .card__subtitle{
         display: none;
@@ -153,7 +160,7 @@ html{
         border-radius: 30px;
         display: block;
         float: left;
-        margin: 0 15px 0 10px;
+        margin: 0 15px 0 0;
     }
     .year{
         font-size: 0.3cm !important; 
@@ -162,13 +169,14 @@ html{
         display: none;
 
     }
-    /* .card-arrow{
-        display: initial;
+    .card-arrow{
+        display: initial !important;
         background: hsla(0,0%,7%,.35);
-        border-radius: 50px;
-        padding: 50px 0 50px 0;
+        border-radius: 0px 50px 50px 0px;
+        padding: 37px 0 37px 0;
+        cursor: pointer;
         
-    } */
+    }
     
 }
 
@@ -177,4 +185,7 @@ html{
         width: 30%;
     }
 
+    .card-arrow{
+        display: none !important;
+    }
 }

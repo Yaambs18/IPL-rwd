@@ -99,10 +99,10 @@ teamdata = [
   ]
 
 fetch("https://cors-anywhere.herokuapp.com/https://ipl-t20.herokuapp.com/teams", {
-    method: "GET", 
-}).then((data) => { return data.json() }).then((res) => {
-    teamdata = res
-    if (res.length != 0) {
+    method: "GET",
+}).then((data) => { return data.json() }).then((tmdata) => {
+    teamdata = tmdata
+    if (tmdata.length != 0) {
         for (let i = 0; i < teamdata.length; i++) {
             console.log()
             teamname[i].innerText = teamdata[i].teamName

@@ -50,3 +50,42 @@ html{
 .card__title{
     font-size: 3rem;
 }
+
+.players-info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.playercard{
+    width: 20%;
+    text-align: center;
+    margin: 10px;
+    border: 1px groove grey;
+    border-radius: 10px;
+}
+
+.playercard img{
+    background: linear-gradient(136deg, rgb(253,185,19), rgb(248,92,0));
+    width: 100%;
+    border-radius: 10px;
+}
+
+.data{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.value{
+    margin: 0;
+    padding: 0;
+    font-size: x-large;
+}
+
+.label{
+    margin: 0;
+    padding: 0;
+
+}

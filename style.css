@@ -180,7 +180,7 @@ html{
     
 }
 
-@media screen and (max-width:1000px) and (min-width:700px){
+@media screen and (max-width:1020px) and (min-width:700px){
     .cards{
         width: 30%;
     }

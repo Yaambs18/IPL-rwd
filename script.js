@@ -98,7 +98,7 @@ teamdata = [
     }
   ]
 
-fetch("https://cors-anywhere.herokuapp.com/https://ipl-t20.herokuapp.com/teams", {
+fetch("https://ipl-t20.herokuapp.com/teams", {
     method: "GET",
 }).then((data) => { return data.json() }).then((tmdata) => {
     teamdata = tmdata

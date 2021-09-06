@@ -226,9 +226,34 @@ ul{
 }
 
 .playercard img{
-    background: linear-gradient(136deg, rgb(253,185,19), rgb(248,92,0));
     width: 100%;
     border-radius: 10px;
+}
+
+.team-card-image.image-csk{
+    background: linear-gradient( 134deg,#fdb913,#f85c00);
+}
+.team-card-image.image-dc{
+    background: linear-gradient( 134deg  ,#004c93,#0358a7);
+    
+}
+.team-card-image.image-pk{
+    background: linear-gradient(134deg,#aa4545,#740f0b);
+}
+.team-card-image.image-kkr{
+    background: linear-gradient(134deg,#70458f,#3d2057);
+}
+.team-card-image.image-mi{
+    background: linear-gradient(134deg,#005da0,#003a63);
+}
+.team-card-image.image-rr{
+    background: linear-gradient(134deg,#2d4d9d,#172e5e);
+}
+.team-card-image.image-rcb{
+    background: linear-gradient(134deg,#000,#464646);
+}
+.team-card-image.image-srh{
+    background: linear-gradient(134deg,#fb643e,#b81c25);
 }
 
 .data{

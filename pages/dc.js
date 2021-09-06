@@ -24,7 +24,7 @@ let dc = {
                 <div class="players-info">
                     ${playersList.players.map(player =>
                     `<div class="playercard">
-                        <img id="img-p1" src=${player.image} alt=${player.name}>
+                        <img class="team-card-image  image-dc" id="img-p1" src=${player.image} alt=${player.name}>
                         <p class="player_name">
                         <strong id="player-1">${player.name}</strong>
                         </p>

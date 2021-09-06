@@ -30,26 +30,167 @@ html{
 
 }
 
-.team-page-header{
-    background-image: url(images/CSK-huddle.png);
-    height: 10cm;
-    display: flex;
+.team-header{
     background-position: 100% 0;
-    background-repeat: no-repeat;
     background-size: auto 100%;
-    margin-bottom: 30px;
     position: relative;
+    height:300px;
+    margin-bottom: 30px;
+  }
+  .team-header.csk{
+      background-image: url(./images/CSK-huddle.png); 
+      background-repeat: no-repeat;
+  }
+  .team-header.csk .team-header-overlay{
+      background:#fdb913;  
+  }
+  .team-header.dc{
+      background-image: url(./images/DC-huddle.png); 
+      background-repeat: no-repeat;
+  }
+  .team-header.dc .team-header-overlay{
+      background:#004c93;
+  }
+  .team-header.pk{
+      background-image: url(./images/PK-huddle.png); 
+      background-repeat: no-repeat;
+  }
+  .team-header.pk .team-header-overlay{
+      background: #b32524;
+  }
+  .team-header.kkr{
+      background-image: url(./images/KKR-huddle.png); 
+      background-repeat: no-repeat;
+  }
+  .team-header.mi{
+      background-image: url(./images/MI-huddle.png); 
+      background-repeat: no-repeat;
+  }
+  .team-header.mi .team-header-overlay{
+      background: #005ea0;
+  }
+  .team-header.rr{
+      background-image: url(./images/RR-huddle.png); 
+      background-repeat: no-repeat;
+  }
+  .team-header.rr .team-header-overlay{
+      background: #004b8c;
+  }
+  .team-header.rcb{
+      background-image: url(./images/RCB-huddle.png); 
+      background-repeat: no-repeat;
+  }
+  .team-header.rcb .team-header-overlay{
+      background: #000;
+  }
+  .team-header.srh{
+      background-image: url(./images/SRH-huddle.png); 
+      background-repeat: no-repeat;
+  }
+  .team-header.srh .team-header-overlay{
+      background:#fb653f;   
+  }
+  .team-header .team-header-overlay{
+      bottom: 0;
+      clip-path: polygon(0 0,93% 0,100% 100%,0 100%);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60%;
+      z-index: 5;
+  }
+  .team-header .team-header-overlay-img{
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  .team-header.csk .team-header-overlay-img{
+     background-image : url(./images/CSK.jpg);
+     opacity: 0.2;
+  }
+  .team-header.dc .team-header-overlay-img{
+      background-image : url(./images/DC.jpg);
+      opacity: 0.2;
+   }
+   .team-header.pk .team-header-overlay-img{
+      background-image : url(./images/PBKS.jpg);
+      opacity: 0.2;
+   }
+   .team-header.kkr .team-header-overlay-img{
+      background-image : url(./images/KKR.jpg);
+      opacity: 0.2;
+   }
+   .team-header.mi .team-header-overlay-img{
+      background-image : url(./images/MI.jpg);
+      opacity: 0.2;
+   }
+   .team-header.rr .team-header-overlay-img{
+      background-image : url(./images/RR.jpg);
+      opacity: 0.2;
+   }
+   .team-header.rcb .team-header-overlay-img{
+      background-image : url(./images/RCB.jpg);
+      opacity: 0.2;
+   }
+   .team-header.srh .team-header-overlay-img{
+      background-image : url(./images/SRH.jpg);
+      opacity: 0.2;
+   }
+  .team-header .team-header-overlay .team-header-overlay-img{
+      content: "";
+      display: inline-block;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+  .team-header::after{
+         
+          bottom: 0;
+          content: "";
+          clip-path: polygon(0 0,90.1% 0,100% 100%,0 100%);
+          left: 0;
+          position: absolute;
+          width: 63%;
+          top: 0;
+  }
+  .csk::after{
+      background: linear-gradient(#0081e5 60%,#005699);
+  }
+  .dc::after{
+      background: linear-gradient(#f83430 60%,#d40b07);
+  }
+  .pk::after{
+      background: linear-gradient(#c7c8ca 60%,#a0a1a5);
+  }
+  .kkr::after{
+      background: linear-gradient(#efb04c 60%,#db8e14);
+  }
+  .mi::after{
+      background: linear-gradient(#aa9a7f 60%,#857458);
+  }
+  .rr::after{
+      background: linear-gradient(#d5ab4b 60%,#ab8328);
+  }
+  .rcb::after{
+      background: linear-gradient(#ff3245 60%,#e50015);
+  }
+  .srh::after{
+      background: linear-gradient(#fdb913 60%,#c28a02);
+  }
+
+.team-page-header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row;
 }
 
-
-.team-info img{
-    float: left;
-    margin: 3rem 4rem 0 1rem;
-    height: 5cm;
+.team-page-header img{
+    margin: 20px;
 }
 
 .card__title{
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 ul{

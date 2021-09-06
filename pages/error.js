@@ -5,8 +5,8 @@ let error404 = {
         
         <div class="loader"></div>
             <div class="error" >
-                <h1> Something Went wrong </h1>
-                <p>please try again</p>
+                <h1> Sorry !!!!! </h1>
+                <p>Please try again..........</p>
             </div>
             
         `

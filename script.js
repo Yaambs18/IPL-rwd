@@ -6,7 +6,7 @@ import mi from './pages/mi.js';
 import rcb from './pages/rcb.js';
 import rr from './pages/rr.js';
 import srh from './pages/srh.js';
-// import error404 from './views/pages/Error.js';
+import error404 from './views/pages/error.js';
 import utils from './utils.js';
 import Teams from './pages/team.js';
 

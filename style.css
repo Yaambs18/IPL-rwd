@@ -188,11 +188,6 @@ html{
         font-size: 1rem;
 
     }
-
-    .card__subtitle{
-
-    }
-
     .card-arrow{
         display: none !important;
     }
@@ -205,10 +200,6 @@ html{
 
     .card__title{
         font-size: 1rem;
-
-    }
-
-    .card__subtitle{
 
     }
 

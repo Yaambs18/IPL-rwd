@@ -41,6 +41,7 @@ html{
     position: relative;
 }
 
+
 .team-info img{
     float: left;
     margin: 3rem 4rem 0 1rem;
@@ -49,6 +50,23 @@ html{
 
 .card__title{
     font-size: 3rem;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.card__subtitle li{
+    margin: 10px 0;
+    padding: 3px;
+
+}
+
+.card__subtitle li strong{
+    display: inline-block;
+    margin-left: 2rem;
+    
 }
 
 .players-info{

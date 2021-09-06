@@ -20,7 +20,6 @@ html{
     height: 1cm;
 
 }
-
 .header h2{
     padding: 5px 0px 5px 10px;
     margin: 0;
@@ -146,7 +145,7 @@ html{
     }
     .card__title{
         text-align: left;
-        font-size: medium;
+        font-size: 1rem !important;
         margin: 0;
         padding: 15px 0 10px 0;
         width: max-content;
@@ -180,9 +179,37 @@ html{
     
 }
 
-@media screen and (max-width:1020px) and (min-width:700px){
+@media screen and (max-width:930px) and (min-width:700px){
+    .cards{
+        width: 45%;
+    }
+
+    .card__title{
+        font-size: 1rem;
+
+    }
+
+    .card__subtitle{
+
+    }
+
+    .card-arrow{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:1130px) and (min-width:930px){
     .cards{
         width: 30%;
+    }
+
+    .card__title{
+        font-size: 1rem;
+
+    }
+
+    .card__subtitle{
+
     }
 
     .card-arrow{

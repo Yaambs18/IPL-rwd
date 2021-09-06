@@ -1,133 +1,46 @@
-teamname = [
-    document.getElementById('csk'),
-    document.getElementById('di'),
-    document.getElementById('kkr'),
-    document.getElementById('mi'),
-    document.getElementById('pk'),
-    document.getElementById('rr'),
-    document.getElementById('rcb'),
-    document.getElementById('srh')
-]
+import dc from './pages/dc.js';
+import Csk from './pages/csk.js';
+import pk from './pages/pk.js';
+import kkr from './pages/kkr.js';
+import mi from './pages/mi.js';
+import rcb from './pages/rcb.js';
+import rr from './pages/rr.js';
+import srh from './pages/srh.js';
+// import error404 from './views/pages/Error.js';
+import utils from './utils.js';
+import Teams from './pages/team.js';
 
-teamvenue = [
-    document.getElementById('csk-ven'),
-    document.getElementById('di-ven'),
-    document.getElementById('kkr-ven'),
-    document.getElementById('mi-ven'),
-    document.getElementById('pk-ven'),
-    document.getElementById('rr-ven'),
-    document.getElementById('rcb-ven'),
-    document.getElementById('srh-ven')
-]
+const routes = {
+    '/': Teams,
+    '/teams': Teams,
+    '/chennai-super-kings': Csk,
+    '/dc': dc,
+    '/pk': pk,
+    '/kkr': kkr,
+    '/mi': mi,
+    '/rr': rr,
+    '/rcb': rcb,
+    '/srh': srh
+};
 
-teamtrophy = [
-    document.getElementById('csk-tr'),
-    document.getElementById('di-tr'),
-    document.getElementById('kkr-tr'),
-    document.getElementById('mi-tr'),
-    document.getElementById('pk-tr'),
-    document.getElementById('rr-tr'),
-    document.getElementById('rcb-tr'),
-    document.getElementById('srh-tr')
-]
 
-teamdata = [
-    {
-      "id": "chennai-super-kings",
-      "teamName": "Chennai Super Kings",
-      "winningYears": [
-        2010,
-        2011,
-        2018
-      ],
-      "venue": "M. A. Chidambaram Stadium"
-    },
-    {
-      "id": "delhi-capitals",
-      "teamName": "Delhi Capitals",
-      "winningYears": [],
-      "venue": "Feroz Shah Kotla Ground"
-    },
-    {
-        "id": "kolkata-knight-riders",
-        "teamName": "Kolkata Knight Riders",
-        "winningYears": [
-          2012,
-          2014
-        ],
-        "venue": "Eden Gardens"
-      },
-    {
-        "id": "mumbai-indians",
-        "teamName": "Mumbai Indians",
-        "winningYears": [
-          2013,
-          2015,
-          2017,
-          2019
-        ],
-        "venue": "Wankhede Stadium"
-    },
-    {
-      "id": "kings-xi-punjab",
-      "teamName": "Kings XI Punjab",
-      "winningYears": [],
-      "venue": "IS Bindra Stadium"
-    },
-    {
-      "id": "rajasthan-royals",
-      "teamName": "Rajasthan Royals",
-      "winningYears": [
-        2008
-      ],
-      "venue": "Sawai Mansingh Stadium"
-    },
-    {
-      "id": "royal-challengers-bangalore",
-      "teamName": "Royal Challengers Bangalore",
-      "winningYears": [],
-      "venue": "M. Chinnaswamy Stadium"
-    },
-    {
-      "id": "sunrisers-hyderabad",
-      "teamName": "Sunrisers Hyderabad",
-      "winningYears": [
-        2016
-      ],
-      "venue": "Rajiv Gandhi Intl. Cricket Stadium"
-    }
-  ]
 
-fetch("https://ipl-t20.herokuapp.com/teams", {
-    method: "GET",
-}).then((data) => { return data.json() }).then((tmdata) => {
-    teamdata = tmdata
-    if (tmdata.length != 0) {
-        for (let i = 0; i < teamdata.length; i++) {
-            console.log()
-            teamname[i].innerText = teamdata[i].teamName
-            teamvenue[i].innerText = teamdata[i].venue
-            if (teamdata[i].winningYears.length > 0) {
-                teamtrophy[i].innerText = teamdata[i].winningYears
-
-            } else {
-                teamtrophy[i].style.visibility = 'hidden'
-            }
-
-        }
-    }
-}).catch((e) => {
-    for (let i = 0; i < teamdata.length; i++) {
-        console.log()
-        teamname[i].innerText = teamdata[i].teamName
-        teamvenue[i].innerText = teamdata[i].venue
-        if (teamdata[i].winningYears.length > 0) {
-            teamtrophy[i].innerText = teamdata[i].winningYears
-
-        } else {
-            teamtrophy[i].style.visibility = 'hidden'
-        }
-
-    }
+const router = async () => {
+  
+    const content = document.getElementById('page_container');
     
-})
+    let request = utils.parseRequestURL()
+    console.log(request);
+    
+    let parsedURL = (request.resource ? '/' + request.resource : '/')
+    console.log(parsedURL);
+    
+    
+    let page = routes[parsedURL] ? routes[parsedURL] : Error404
+    content.innerHTML = await page.render();
+    await page.after_render();
+}
+
+window.addEventListener('hashchange', router);
+
+window.addEventListener('load', router);

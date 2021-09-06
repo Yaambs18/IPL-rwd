@@ -6,7 +6,7 @@ import mi from './pages/mi.js';
 import rcb from './pages/rcb.js';
 import rr from './pages/rr.js';
 import srh from './pages/srh.js';
-import error404 from './views/pages/error.js';
+import error404 from './pages/error.js';
 import utils from './utils.js';
 import Teams from './pages/team.js';
 
@@ -36,7 +36,7 @@ const router = async () => {
     console.log(parsedURL);
     
     
-    let page = routes[parsedURL] ? routes[parsedURL] : Error404
+    let page = routes[parsedURL] ? routes[parsedURL] : error404
     content.innerHTML = await page.render();
     await page.after_render();
 }
